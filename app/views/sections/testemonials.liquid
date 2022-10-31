@@ -1,0 +1,223 @@
+---
+# Name of the section displayed in the editor UI
+# (only if keep_name is set to true)
+name: Testemonials
+
+# By default, the first text type setting will be used as
+# the name of the section in the editor UI.
+# To keep the name of the section instead, uncomment the following line.
+# keep_name: true
+
+# Icon of the section in the editor UI
+# Values: header, default, slide, text, image_text, list, footer
+icon: slide
+
+# By default, the first image_picker type setting will be used
+# as the icon of the section in the editor UI.
+# To keep the icon of the section instead, uncomment the following line.
+# keep_icon: true
+
+# Definition of the settings:
+# A setting type can be one of the following values: text, image_picker, checkbox, radio, select, url, hint, content_type.
+# Please visit: https://doc.locomotivecms.com/docs/json-definition for more explanation.
+settings:
+- label: "My awesome title"
+  id: title
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "An image"
+  id: image
+  type: image_picker
+  
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: 
+- name: "List item"
+  type: list_item
+  settings:
+  - label: "Item title"
+    id: title
+    type: text
+    # html: true
+    # line_break: true
+    default: "Vitae distinctio aliquam assumenda."
+  - label: "Item image"
+    id: image
+    type: image_picker
+    default: "/samples/images/default.svg"
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# Presets can be seen as different versions of a same section.
+# Useless if the section is not aimed to be used along with section_dropzone liquid tag
+presets:
+  - name: "Testemonials"
+    category: "Category"
+    settings:
+      title: "Esse ex similique aut."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Recusandae aliquid id optio."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Et voluptatem ipsam aut."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Laborum incidunt aut ut."
+        image: "/samples/images/default.svg"
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+  {% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "testemonials"
+  settings:
+    title: "Ut natus qui et."
+    image: "/samples/images/default.svg"
+  blocks: 
+  - type: list_item
+    settings:
+      title: "Vitae corrupti asperiores deserunt."
+      image: "/samples/images/default.svg"
+  - type: list_item
+    settings:
+      title: "Et aut ut facere."
+      image: "/samples/images/default.svg"
+  - type: list_item
+    settings:
+      title: "Dolorem consequatur quo aut."
+      image: "/samples/images/default.svg"
+
+2. as stand-alone section
+
+  {% section 'testemonials' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+  testemonials:
+    settings:
+      title: "Similique vel consequatur velit."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Sed quod esse aut."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Itaque nisi dolor provident."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Ex quisquam dolorem veniam."
+        image: "/samples/images/default.svg"
+
+<div id="{{ section.anchor_id }}" class="testemonials-section" {{ section.locomotive_attributes }}>
+  <h2>Section : Testemonials</h2>
+
+  <hr/>
+
+  <h3>Settings</h3>
+
+  <div>{{ section.settings.title }}</div>
+  <p><img src="{{ section.settings.image }}" /></p>
+
+    <hr/>
+
+  <h3>Blocks</h3>
+  <ul>
+    {% for block in section.blocks %}
+    <li {{ block.locomotive_attributes }} data-index="{{ forloop.index0 }}">
+      <h4>Settings for List item</h4>
+
+      <div>{{ block.settings.title }}</div>
+      <p><img src="{{ block.settings.image }}" /></p>
+    </li>
+    {% endfor %}
+  </ul>
+  
+</div>
+{% endcomment %}
+<!-- testemonials - start -->
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+    <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-12">What others say about us</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-10 sm:gap-y-12 lg:divide-x">
+      <!-- quote - start -->
+      <div class="flex flex-col items-center gap-4 md:gap-6 sm:px-4 lg:px-8">
+        <div class="text-gray-600 text-center">“This is a section of some simple filler text, also known as placeholder text.”</div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-2 md:gap-3">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gray-100 rounded-full overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=112" loading="lazy" alt="Photo by Radu Florin" class="w-full h-full object-cover object-center" />
+          </div>
+
+          <div>
+            <div class="text-indigo-500 text-sm md:text-base font-bold text-center sm:text-left">John McCulling</div>
+            <p class="text-gray-500 text-sm md:text-sm text-center sm:text-left">CEO / Datadrift</p>
+          </div>
+        </div>
+      </div>
+      <!-- quote - end -->
+
+      <!-- quote - start -->
+      <div class="flex flex-col items-center gap-4 md:gap-6 sm:px-4 lg:px-8">
+        <div class="text-gray-600 text-center">“This is a section of some simple filler text, also known as placeholder text.”</div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-2 md:gap-3">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gray-100 rounded-full overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?auto=format&q=75&fit=crop&w=112" loading="lazy" alt="Photo by christian ferrer" class="w-full h-full object-cover object-center" />
+          </div>
+
+          <div>
+            <div class="text-indigo-500 text-sm md:text-base font-bold text-center sm:text-left">Kate Berg</div>
+            <p class="text-gray-500 text-sm md:text-sm text-center sm:text-left">CFO / Dashdash</p>
+          </div>
+        </div>
+      </div>
+      <!-- quote - end -->
+
+      <!-- quote - start -->
+      <div class="flex flex-col items-center gap-4 md:gap-6 sm:px-4 lg:px-8">
+        <div class="text-gray-600 text-center">“This is a section of some simple filler text, also known as placeholder text.”</div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-2 md:gap-3">
+          <div class="w-12 md:w-14 h-12 md:h-14 bg-gray-100 rounded-full overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&q=75&fit=crop&w=500" loading="lazy" alt="Photo by Ayo Ogunseinde" class="w-full h-full object-cover object-center" />
+          </div>
+
+          <div>
+            <div class="text-indigo-500 text-sm md:text-base font-bold text-center sm:text-left">Greg Jackson</div>
+            <p class="text-gray-500 text-sm md:text-sm text-center sm:text-left">CTO / Uptime</p>
+          </div>
+        </div>
+      </div>
+      <!-- quote - end -->
+    </div>
+  </div>
+</div>
+<!-- testemonials - end -->

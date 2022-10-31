@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _stylesheets_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../stylesheets/app.scss */ \"./app/assets/stylesheets/app.scss\");\n/* harmony import */ var _stylesheets_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_stylesheets_app_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sections_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/_manager */ \"./app/assets/javascripts/sections/_manager.js\");\n/* harmony import */ var _sections__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections */ \"./app/assets/javascripts/sections/index.js\");\n/* harmony import */ var _sections__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sections__WEBPACK_IMPORTED_MODULE_2__);\n// === Wagon main javascript file ===\n// Tell Webpack to load the style\n // Import the classes required to handle sections\n\n\n\ndocument.addEventListener('DOMContentLoaded', function (event) {\n  // Load all the sections\n  var sectionsManager = new _sections_manager__WEBPACK_IMPORTED_MODULE_1__[\"default\"](); // Register sections here. DO NOT REMOVE OR UPDATE THIS LINE\n\n  sectionsManager.start();\n});\n\n//# sourceURL=webpack:///./app/assets/javascripts/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _stylesheets_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../stylesheets/app.scss */ \"./app/assets/stylesheets/app.scss\");\n/* harmony import */ var _stylesheets_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_stylesheets_app_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sections_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/_manager */ \"./app/assets/javascripts/sections/_manager.js\");\n/* harmony import */ var _sections__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections */ \"./app/assets/javascripts/sections/index.js\");\n// === Wagon main javascript file ===\n// Tell Webpack to load the style\n // Import the classes required to handle sections\n\n\n\ndocument.addEventListener('DOMContentLoaded', function (event) {\n  // Load all the sections\n  var sectionsManager = new _sections_manager__WEBPACK_IMPORTED_MODULE_1__[\"default\"](); // Register sections here. DO NOT REMOVE OR UPDATE THIS LINE\n\n  sectionsManager.registerSection('footer', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Footer\"]);\n  sectionsManager.registerSection('newsletter', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Newsletter\"]);\n  sectionsManager.registerSection('testemonials', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Testemonial\"]);\n  sectionsManager.registerSection('team', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Team\"]);\n  sectionsManager.registerSection('stats', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Stat\"]);\n  sectionsManager.registerSection('logo_cloud', _sections__WEBPACK_IMPORTED_MODULE_2__[\"LogoCloud\"]);\n  sectionsManager.registerSection('features', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Feature\"]);\n  sectionsManager.registerSection('hero', _sections__WEBPACK_IMPORTED_MODULE_2__[\"Hero\"]);\n  sectionsManager.start();\n});\n\n//# sourceURL=webpack:///./app/assets/javascripts/app.js?");
 
 /***/ }),
 
@@ -110,14 +110,111 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction _classCallCheck(inst
 
 /***/ }),
 
+/***/ "./app/assets/javascripts/sections/features.js":
+/*!*****************************************************!*\
+  !*** ./app/assets/javascripts/sections/features.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/features.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/footer.js":
+/*!***************************************************!*\
+  !*** ./app/assets/javascripts/sections/footer.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/footer.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/hero.js":
+/*!*************************************************!*\
+  !*** ./app/assets/javascripts/sections/hero.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/hero.js?");
+
+/***/ }),
+
 /***/ "./app/assets/javascripts/sections/index.js":
 /*!**************************************************!*\
   !*** ./app/assets/javascripts/sections/index.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: Hero, Feature, LogoCloud, Stat, Team, Testemonial, Newsletter, Footer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// Import all the sections here\n//\n// Example:\n// export { default as MyAwesomeSection } from './my_awesome_section';\n//\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero */ \"./app/assets/javascripts/sections/hero.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Hero\", function() { return _hero__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _features__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features */ \"./app/assets/javascripts/sections/features.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Feature\", function() { return _features__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _logo_cloud__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logo_cloud */ \"./app/assets/javascripts/sections/logo_cloud.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"LogoCloud\", function() { return _logo_cloud__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n/* harmony import */ var _stats__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./stats */ \"./app/assets/javascripts/sections/stats.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Stat\", function() { return _stats__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n/* harmony import */ var _team__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./team */ \"./app/assets/javascripts/sections/team.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Team\", function() { return _team__WEBPACK_IMPORTED_MODULE_4__[\"default\"]; });\n\n/* harmony import */ var _testemonials__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./testemonials */ \"./app/assets/javascripts/sections/testemonials.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Testemonial\", function() { return _testemonials__WEBPACK_IMPORTED_MODULE_5__[\"default\"]; });\n\n/* harmony import */ var _newsletter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./newsletter */ \"./app/assets/javascripts/sections/newsletter.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Newsletter\", function() { return _newsletter__WEBPACK_IMPORTED_MODULE_6__[\"default\"]; });\n\n/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer */ \"./app/assets/javascripts/sections/footer.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Footer\", function() { return _footer__WEBPACK_IMPORTED_MODULE_7__[\"default\"]; });\n\n// Import all the sections here\n//\n// Example:\n// export { default as MyAwesomeSection } from './my_awesome_section';\n//\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/index.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/logo_cloud.js":
+/*!*******************************************************!*\
+  !*** ./app/assets/javascripts/sections/logo_cloud.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/logo_cloud.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/newsletter.js":
+/*!*******************************************************!*\
+  !*** ./app/assets/javascripts/sections/newsletter.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/newsletter.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/stats.js":
+/*!**************************************************!*\
+  !*** ./app/assets/javascripts/sections/stats.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/stats.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/team.js":
+/*!*************************************************!*\
+  !*** ./app/assets/javascripts/sections/team.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/team.js?");
+
+/***/ }),
+
+/***/ "./app/assets/javascripts/sections/testemonials.js":
+/*!*********************************************************!*\
+  !*** ./app/assets/javascripts/sections/testemonials.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Section = {// load: (section) => {\n  // },\n  // unload: (section) => {\n  // },\n  // select: (section) => {\n  // },\n  // deselect: (section) => {\n  // },\n  // reorder: (section) => {\n  // },\n  // blockSelect: (section, block) => {\n  // },\n  // blockDeselect: (section, block) => {\n  // }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Section);\n\n//# sourceURL=webpack:///./app/assets/javascripts/sections/testemonials.js?");
 
 /***/ }),
 

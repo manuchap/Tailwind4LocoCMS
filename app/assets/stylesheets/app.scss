@@ -4,3 +4,11 @@
 @import "../../../node_modules/tailwindcss/utilities";
 @import "./style.css";
 // Register sections here. DO NOT REMOVE OR UPDATE THIS LINE
+@import 'sections/footer';
+@import 'sections/newsletter';
+@import 'sections/testemonials';
+@import 'sections/team';
+@import 'sections/stats';
+@import 'sections/logo_cloud';
+@import 'sections/features';
+@import 'sections/hero';

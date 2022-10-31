@@ -1,0 +1,225 @@
+---
+# Name of the section displayed in the editor UI
+# (only if keep_name is set to true)
+name: Hero
+
+# By default, the first text type setting will be used as
+# the name of the section in the editor UI.
+# To keep the name of the section instead, uncomment the following line.
+# keep_name: true
+
+# Icon of the section in the editor UI
+# Values: header, default, slide, text, image_text, list, footer
+icon: header
+
+# By default, the first image_picker type setting will be used
+# as the icon of the section in the editor UI.
+# To keep the icon of the section instead, uncomment the following line.
+# keep_icon: true
+
+# Definition of the settings:
+# A setting type can be one of the following values: text, image_picker, checkbox, radio, select, url, hint, content_type.
+# Please visit: https://doc.locomotivecms.com/docs/json-definition for more explanation.
+settings:
+- label: "My awesome title"
+  id: title
+  type: text
+  # html: true
+  # line_break: true
+  
+- label: "An image"
+  id: image
+  type: image_picker
+  
+# Definition of the blocks.
+# You can define as many types of blocks as you want.
+blocks: 
+- name: "List item"
+  type: list_item
+  settings:
+  - label: "Item title"
+    id: title
+    type: text
+    # html: true
+    # line_break: true
+    default: "Assumenda voluptas aut ut."
+  - label: "Item image"
+    id: image
+    type: image_picker
+    default: "/samples/images/default.svg"
+
+# By default, in the editor UI, blocks will be listed below the "Content" title.
+# The title can be changed with the following property:
+# blocks_label: "My list of items"
+
+# Presets can be seen as different versions of a same section.
+# Useless if the section is not aimed to be used along with section_dropzone liquid tag
+presets:
+  - name: "Hero"
+    category: "Category"
+    settings:
+      title: "Dolorum quod velit ut."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Molestiae dolorem architecto similique."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Debitis aut maxime sed."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Nulla officiis nemo quia."
+        image: "/samples/images/default.svg"
+
+---
+{% comment %}
+Above is the YAML definition of your section. Modify it to match your needs.
+
+To use your section, 2 possibilities:
+
+1. within a dropzone
+
+Make sure that your layouts or your page includes the following liquid tag:
+
+  {% sections_dropzone %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of any page including the {% sections_dropzone %}
+(or inheriting from a layout including it):
+
+sections_dropzone_content:
+- type: "hero"
+  settings:
+    title: "Cumque et cum unde."
+    image: "/samples/images/default.svg"
+  blocks: 
+  - type: list_item
+    settings:
+      title: "Architecto qui sit enim."
+      image: "/samples/images/default.svg"
+  - type: list_item
+    settings:
+      title: "Accusamus veritatis sit autem."
+      image: "/samples/images/default.svg"
+  - type: list_item
+    settings:
+      title: "Corporis tenetur cum quia."
+      image: "/samples/images/default.svg"
+
+2. as stand-alone section
+
+  {% section 'hero' %}
+
+If you want to test this section in your Wagon site, add the following
+lines in the YAML section of the page including the statement above or complete it.
+
+sections_content:
+  hero:
+    settings:
+      title: "Corrupti magni aut esse."
+      image: "/samples/images/default.svg"
+    blocks: 
+    - type: list_item
+      settings:
+        title: "Quia consequuntur sunt provident."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Odio ratione qui esse."
+        image: "/samples/images/default.svg"
+    - type: list_item
+      settings:
+        title: "Quibusdam veritatis debitis molestiae."
+        image: "/samples/images/default.svg"
+
+<div id="{{ section.anchor_id }}" class="hero-section" {{ section.locomotive_attributes }}>
+  <h2>Section : Hero</h2>
+
+  <hr/>
+
+  <h3>Settings</h3>
+
+  <div>{{ section.settings.title }}</div>
+  <p><img src="{{ section.settings.image }}" /></p>
+
+    <hr/>
+
+  <h3>Blocks</h3>
+  <ul>
+    {% for block in section.blocks %}
+    <li {{ block.locomotive_attributes }} data-index="{{ forloop.index0 }}">
+      <h4>Settings for List item</h4>
+
+      <div>{{ block.settings.title }}</div>
+      <p><img src="{{ block.settings.image }}" /></p>
+    </li>
+    {% endfor %}
+  </ul>
+  
+</div>
+{% endcomment %}
+<!-- hero - start -->
+<div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <header class="flex justify-between items-center py-4 md:py-8 mb-8 md:mb-12 xl:mb-16">
+      <!-- logo - start -->
+      <a href="/" class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
+        <svg width="95" height="94" viewBox="0 0 95 94" class="w-6 h-auto text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+        </svg>
+
+        Flowrift
+      </a>
+      <!-- logo - end -->
+
+      <!-- nav - start -->
+      <nav class="hidden lg:flex gap-12">
+        <a href="#" class="text-indigo-500 text-lg font-semibold">Home</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Features</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Pricing</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</a>
+      </nav>
+      <!-- nav - end -->
+
+      <!-- buttons - start -->
+      <a href="#" class="hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Contact Sales</a>
+
+      <button type="button" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg>
+
+        Menu
+      </button>
+      <!-- buttons - end -->
+    </header>
+
+    <section class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10 md:gap-16">
+      <!-- content - start -->
+      <div class="xl:w-5/12 flex flex-col justify-center sm:text-center lg:text-left lg:py-12 xl:py-24">
+        <p class="text-indigo-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6">Very proud to introduce</p>
+
+        <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">Revolutionary way to build the web</h1>
+
+        <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.</p>
+
+        <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
+          <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Start now</a>
+
+          <a href="#" class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Take tour</a>
+        </div>
+      </div>
+      <!-- content - end -->
+
+      <!-- image - start -->
+      <div class="xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
+        <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Fakurian Design" class="w-full h-full object-cover object-center" />
+      </div>
+      <!-- image - end -->
+    </section>
+  </div>
+</div>
+<!-- hero - end -->
