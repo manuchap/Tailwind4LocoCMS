@@ -4,7 +4,7 @@
 
 source 'https://rubygems.org'
 
-gem 'locomotivecms_wagon', '~> 3.0.5'
+gem 'locomotivecms_wagon'
 gem 'guard-livereload'
 group :development do
   # Mac OS X
