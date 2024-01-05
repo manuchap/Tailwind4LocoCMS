@@ -1,39 +1,16 @@
 ---
-# Name of the section displayed in the editor UI
-# (only if keep_name is set to true)
 name: Newsletter
-
-# By default, the first text type setting will be used as
-# the name of the section in the editor UI.
-# To keep the name of the section instead, uncomment the following line.
-# keep_name: true
-
-# Icon of the section in the editor UI
-# Values: header, default, slide, text, image_text, list, footer
 icon: default
-
-# By default, the first image_picker type setting will be used
-# as the icon of the section in the editor UI.
-# To keep the icon of the section instead, uncomment the following line.
-# keep_icon: true
-
-# Definition of the settings:
-# A setting type can be one of the following values: text, image_picker, checkbox, radio, select, url, hint, content_type.
-# Please visit: https://doc.locomotivecms.com/docs/json-definition for more explanation.
 settings:
 - label: "My awesome title"
   id: title
   type: text
   # html: true
   # line_break: true
-  
 - label: "An image"
   id: image
   type: image_picker
-  
-# Definition of the blocks.
-# You can define as many types of blocks as you want.
-blocks: 
+blocks:
 - name: "List item"
   type: list_item
   settings:
@@ -47,20 +24,13 @@ blocks:
     id: image
     type: image_picker
     default: "/samples/images/default.svg"
-
-# By default, in the editor UI, blocks will be listed below the "Content" title.
-# The title can be changed with the following property:
-# blocks_label: "My list of items"
-
-# Presets can be seen as different versions of a same section.
-# Useless if the section is not aimed to be used along with section_dropzone liquid tag
 presets:
   - name: "Newsletter"
     category: "Category"
     settings:
       title: "Voluptatum enim explicabo sit."
       image: "/samples/images/default.svg"
-    blocks: 
+    blocks:
     - type: list_item
       settings:
         title: "Quas aut tenetur eius."
@@ -73,95 +43,7 @@ presets:
       settings:
         title: "Dolorem vel qui et."
         image: "/samples/images/default.svg"
-
 ---
-{% comment %}
-Above is the YAML definition of your section. Modify it to match your needs.
-
-To use your section, 2 possibilities:
-
-1. within a dropzone
-
-Make sure that your layouts or your page includes the following liquid tag:
-
-  {% sections_dropzone %}
-
-If you want to test this section in your Wagon site, add the following
-lines in the YAML section of any page including the {% sections_dropzone %}
-(or inheriting from a layout including it):
-
-sections_dropzone_content:
-- type: "newsletter"
-  settings:
-    title: "Voluptates non nam reiciendis."
-    image: "/samples/images/default.svg"
-  blocks: 
-  - type: list_item
-    settings:
-      title: "Cumque quia libero unde."
-      image: "/samples/images/default.svg"
-  - type: list_item
-    settings:
-      title: "Laborum eum praesentium itaque."
-      image: "/samples/images/default.svg"
-  - type: list_item
-    settings:
-      title: "Cupiditate odio impedit qui."
-      image: "/samples/images/default.svg"
-
-2. as stand-alone section
-
-  {% section 'newsletter' %}
-
-If you want to test this section in your Wagon site, add the following
-lines in the YAML section of the page including the statement above or complete it.
-
-sections_content:
-  newsletter:
-    settings:
-      title: "Accusantium libero voluptatem fuga."
-      image: "/samples/images/default.svg"
-    blocks: 
-    - type: list_item
-      settings:
-        title: "Ducimus nihil dolor eos."
-        image: "/samples/images/default.svg"
-    - type: list_item
-      settings:
-        title: "Ut dolorem voluptatem hic."
-        image: "/samples/images/default.svg"
-    - type: list_item
-      settings:
-        title: "Iure et debitis nobis."
-        image: "/samples/images/default.svg"
-
-<div id="{{ section.anchor_id }}" class="newsletter-section" {{ section.locomotive_attributes }}>
-  <h2>Section : Newsletter</h2>
-
-  <hr/>
-
-  <h3>Settings</h3>
-
-  <div>{{ section.settings.title }}</div>
-  <p><img src="{{ section.settings.image }}" /></p>
-
-    <hr/>
-
-  <h3>Blocks</h3>
-  <ul>
-    {% for block in section.blocks %}
-    <li {{ block.locomotive_attributes }} data-index="{{ forloop.index0 }}">
-      <h4>Settings for List item</h4>
-
-      <div>{{ block.settings.title }}</div>
-      <p><img src="{{ block.settings.image }}" /></p>
-    </li>
-    {% endfor %}
-  </ul>
-  
-</div>
-{% endcomment %}
-<!-- newsletter - start -->
 <div class="bg-white py-6 sm:py-8 lg:py-12">
   <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
     <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4 sm:p-8">
@@ -169,15 +51,11 @@ sections_content:
         <h2 class="text-indigo-500 text-xl sm:text-2xl lg:text-3xl font-bold text-center">Get the latest updates</h2>
         <p class="text-gray-500 text-center">Sign up for our newsletter</p>
       </div>
-
       <form class="w-full max-w-md flex gap-2 mb-3 sm:mb-5">
         <input placeholder="Email" class="w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-
         <button class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2">Send</button>
       </form>
-
       <p class="text-gray-400 text-xs text-center">By signing up to our newsletter you agree to our <a href="#" class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100">Term of Service</a> and <a href="#" class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100">Privacy Policy</a>.</p>
     </div>
   </div>
 </div>
-<!-- newsletter - end -->
